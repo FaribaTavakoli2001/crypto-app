@@ -4,7 +4,7 @@ import { RotatingLines } from 'react-loader-spinner'
 
 import styles from './TableCoin.module.css'
 
-function TableCoin({coins , isLoding}) {
+function TableCoin({coins , isLoding , setChart}) {
 
   return (
     <div className={styles.container}>
@@ -22,7 +22,7 @@ function TableCoin({coins , isLoding}) {
              </tr>
          </thead>
          <tbody>
-             {coins.map( coin => <TableRow coin={coin} key={coin.id}/>)}
+             {coins.map( coin => <TableRow coin={coin} key={coin.id} setChart={setChart}/>)}
          </tbody>
      </table> )}
        

@@ -4,7 +4,7 @@ import { RotatingLines } from 'react-loader-spinner';
 
 import styles from './Search.module.css';
 
-function Search({currency , setCurency}) {
+function Search({currency , setCurrency}) {
     const [text , setText] = useState('');
     const [coins , setCoins] = useState([]);
     const [isLoding , setIsLoding] = useState(false);
@@ -51,7 +51,7 @@ function Search({currency , setCurency}) {
         placeholder='Search'
         value={text}
         onChange={(e) => setText(e.target.value)} />
-        <select value={currency} onChange={(e) => setCurency(e.target.value)}>
+        <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
             <option value='usd'>USD</option>
             <option value='eur'>EUR</option>
             <option value='jpy'>JPY</option>
